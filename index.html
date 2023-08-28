@@ -1,7 +1,59 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h1> Buna ziua! </h1>
+        <h1> #include <iostream>
+using namespace std;
+
+int a[52][52], n, m, min1, min2, min1i, min2i, min1j, min2j;
+int main()
+{
+    cin >> n >> m;
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= m; j++)
+            cin >> a[i][j];
+    min1 = a[1][1];
+    min1i = 1;
+    min2i = 1;
+    for (int j = 1; j <= 1; j++)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            if (a[i][j] < min1)
+            {
+                min1 = a[i][j];
+                min1i = i;
+                min1j = j;
+            }
+        }
+    }
+    min2 = a[1][m];
+    min2i = 1;
+    min2j = m;
+    for (int j = m; j <= m; j++)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            if (a[i][j] < min2)
+            {
+                min2 = a[i][j];
+                min2i = i;
+                min2j = j;
+            }
+        }
+    }
+
+    int aux = a[min1i][min1j];
+    a[min1i][min1j] = a[min2i][min2j];
+    a[min2i][min2j] = aux;
+    
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= m; j++)
+            cout << a[i][j] << " ";
+        cout << "\n";
+    }
+    return 0;
+} </h1>
         <title> Mihai's page </title>
     </body>
 </html>
