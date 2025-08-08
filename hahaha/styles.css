@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #ffe5b4, #fff8dc);
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Culori si customizare bara de sus */
+.topnav {
+    background-color: #8b0000; /* roșu închis */
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav a {
+    float: left;
+    color: #fff5e6;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #ff8c00;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: #ff4500;
+    color: white;
+}
+
+/* Secțiunea principală */
+.hero {
+    height: 80vh; /* ocupă aproape tot ecranul */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centrează vertical */
+    align-items: center; /* centrează orizontal */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Titlu mare */
+.hero h1 {
+    font-size: 3rem;
+    color: #8b0000;
+    font-family: 'Courgette', cursive;
+    margin-bottom: 10px;
+}
+
+/* Subtitlu */
+.hero h2 {
+    font-size: 1.5rem;
+    color: #ff4500;
+    font-weight: normal;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Responsivitate */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero h2 {
+        font-size: 1rem;
+    }
+    .topnav a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
