@@ -43,16 +43,17 @@ body {
     text-align: center;
     padding: 20px;
 
-    background: url("gratarbg.jpg") center/cover no-repeat;
-    position: relative;
+    /*background: url("media/gratarbg.jpg") center/cover no-repeat;
+    */position: relative;
 }
 
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.2); 
+    /* modifica ult val pt opacitate*/
+    /* backdrop-filter: blur(4px); */
 }
 
 .hero h1,
@@ -96,7 +97,7 @@ body {
     text-align: center;
 }
 
-.proiect h2 {
+.proiect h2 { /*subtitlu*/
     color: #ffd700;
     margin-bottom: 10px;
 }
