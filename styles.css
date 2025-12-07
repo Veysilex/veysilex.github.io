@@ -33,6 +33,14 @@ body {
     color: white;
 }
 
+.hero.home-bg {
+    background: url("media/gratarbg.jpg") center/cover no-repeat;
+}
+
+.hero.robotica-bg {
+    background: url('media/roboticagrupiasi2.jpg') center/cover no-repeat;
+}
+
 /* Hero section */
 .hero {
     height: 80vh;
@@ -42,9 +50,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
-
-    /*background: url("media/gratarbg.jpg") center/cover no-repeat;
-    */position: relative;
+    position: relative;
 }
 
 .hero::before {
