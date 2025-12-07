@@ -45,6 +45,15 @@ body {
     background: url('media/electroboss2.jpg') center/cover no-repeat;
 }
 
+.hero.voluntariat-bg {
+    background: url('media/test.jpg') center/cover no-repeat;
+}
+
+.hero.voluntariat-bg::before {
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(2px);
+}
+
 /* Hero section */
 .hero {
     height: 80vh;
@@ -124,25 +133,27 @@ body {
 }
 
 .image-row {
-    display: flex;              /* Activează așezarea flexibilă */
-    justify-content: center;    /* Centrează imaginile pe orizontală */
-    gap: 20px;                  /* Spațiu între imagini */
-    margin-bottom: 20px;        /* Spațiu sub rândul de imagini */
-    flex-wrap: wrap;            /* Permite trecerea pe rând nou pe ecrane mici */
+    display: flex;              
+    justify-content: center;    
+    gap: 20px;                  
+    margin-bottom: 20px;        
+    flex-wrap: wrap;            
 }
 
 .image-row img {
-    width: 45%;                 /* Fiecare imagine ocupă puțin sub jumătate */
-    height: 300px;              /* Înălțime fixă pentru uniformitate */
-    object-fit: cover;          /* Taie imaginea dacă nu se încadrează, fără a o deforma */
+    width: 45%;                 
+    height: 300px;              
+    object-fit: cover;          
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
     transition: transform 0.5s ease; /* Efect fin la hover */
 }
 
+
 .image-row img:hover {
     transform: scale(1.05);
 }
+
 
 @media (max-width: 600px) {
     .image-row img {
