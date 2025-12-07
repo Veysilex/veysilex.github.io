@@ -53,7 +53,7 @@ body {
     inset: 0;
     background: rgba(0, 0, 0, 0.2); 
     /* modifica ult val pt opacitate*/
-    /* backdrop-filter: blur(4px); */
+    backdrop-filter: blur(1px);
 }
 
 .hero h1,
