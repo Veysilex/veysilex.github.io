@@ -161,3 +161,43 @@ body {
         height: auto;
     }
 }
+
+/* --- Modificări pentru Galeria Foto (Robotica) --- */
+
+/* Clasa three-col forțează imaginile să ocupe cam 30% din lățime */
+.image-row.three-col img {
+    width: 30%;
+    height: 200px; /* Înălțime puțin mai mică pentru a arăta bine pe linie */
+}
+
+/* Clasa four-col pentru situația cu 4 imagini la FLL */
+.image-row.four-col img {
+    width: 22%; /* Aproximativ un sfert din lățime */
+    height: 180px;
+}
+
+/* RESPONSIVE: Pe tabletă facem 2 pe rând */
+@media (max-width: 900px) {
+    .image-row.three-col img,
+    .image-row.four-col img {
+        width: 45%; /* Două pe rând */
+        margin-bottom: 10px;
+    }
+}
+
+/* RESPONSIVE: Pe telefon, una sub alta (deja existent, dar ne asigurăm) */
+@media (max-width: 600px) {
+    .image-row.three-col img,
+    .image-row.four-col img {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Pe telefon, schimbam directia la sectiunea intro (text sus, poza jos) */
+    .proiect {
+        flex-direction: column;
+    }
+    .proiect img {
+        max-width: 100% !important;
+    }
+}
