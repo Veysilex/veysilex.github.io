@@ -21,6 +21,7 @@ body {
     padding: 14px 20px;
     text-decoration: none;
     font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .topnav a:hover {
@@ -33,6 +34,7 @@ body {
     color: white;
 }
 
+/* Imagini de fundal */
 .hero.home-bg {
     background: url("media/gratarbg.jpg") center/cover no-repeat;
 }
@@ -54,7 +56,7 @@ body {
     backdrop-filter: blur(2px);
 }
 
-/* Hero section */
+/* Hero section general */
 .hero {
     height: 80vh;
     display: flex;
@@ -71,7 +73,6 @@ body {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.2); 
-    /* modifica ult val pt opacitate*/
     backdrop-filter: blur(1px);
 }
 
@@ -95,8 +96,9 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+/* Container continut pagini */
 .content {
-    max-width: 900px;
+    max-width: 85%;
     margin: 40px auto;
     padding: 20px;
     background: rgba(255,255,255,0.05);
@@ -111,12 +113,13 @@ body {
     margin-bottom: 30px;
 }
 
+/* Sectiuni proiecte */
 .proiect {
     margin-bottom: 40px;
     text-align: center;
 }
 
-.proiect h2 { /*subtitlu*/
+.proiect h2 { 
     color: #ffd700;
     margin-bottom: 10px;
 }
@@ -132,6 +135,7 @@ body {
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
 }
 
+/* Galerii Foto Simple */
 .image-row {
     display: flex;              
     justify-content: center;    
@@ -146,14 +150,12 @@ body {
     object-fit: cover;          
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
-    transition: transform 0.5s ease; /* Efect fin la hover */
+    transition: transform 0.5s ease;
 }
-
 
 .image-row img:hover {
     transform: scale(1.05);
 }
-
 
 @media (max-width: 600px) {
     .image-row img {
@@ -163,29 +165,24 @@ body {
 }
 
 /* --- Modificări pentru Galeria Foto (Robotica) --- */
-
-/* Clasa three-col forțează imaginile să ocupe cam 30% din lățime */
 .image-row.three-col img {
     width: 30%;
-    height: 200px; /* Înălțime puțin mai mică pentru a arăta bine pe linie */
+    height: 200px;
 }
 
-/* Clasa four-col pentru situația cu 4 imagini la FLL */
 .image-row.four-col img {
-    width: 22%; /* Aproximativ un sfert din lățime */
+    width: 22%;
     height: 180px;
 }
 
-/* RESPONSIVE: Pe tabletă facem 2 pe rând */
 @media (max-width: 900px) {
     .image-row.three-col img,
     .image-row.four-col img {
-        width: 45%; /* Două pe rând */
+        width: 45%;
         margin-bottom: 10px;
     }
 }
 
-/* RESPONSIVE: Pe telefon, una sub alta (deja existent, dar ne asigurăm) */
 @media (max-width: 600px) {
     .image-row.three-col img,
     .image-row.four-col img {
@@ -193,11 +190,174 @@ body {
         height: auto;
     }
     
-    /* Pe telefon, schimbam directia la sectiunea intro (text sus, poza jos) */
     .proiect {
         flex-direction: column;
     }
     .proiect img {
         max-width: 100% !important;
+    }
+}
+
+/* --- Stiluri pentru pagina Voluntariat --- */
+.split-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.split-container .text-side {
+    flex: 1;
+}
+
+.split-container .image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.split-container img {
+    max-width: 100%;
+    max-height: 400px; 
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.split-container img:hover {
+    transform: scale(1.05);
+}
+
+.split-container.reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .split-container, 
+    .split-container.reverse {
+        flex-direction: column;
+        text-align: center;     
+    }
+
+    .split-container img {
+        max-width: 100%;
+    }
+}
+
+/* --- Stiluri Noi pentru Index (Butoane și Text) --- */
+
+.intro-text {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    max-width: 700px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text.sus {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    max-width: 850px;
+    margin-top: -1px;
+    margin-bottom: -20px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text.sus.despre {
+    margin-bottom: 0px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* STIL SIMPLIFICAT PENTRU BUTOANE (ca la Topnav) */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #00e6e6; 
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 20px; 
+    /* Tranziție simplă doar de culoare */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+
+/* Hover simplu: se inversează culorile (ca la Topnav) */
+.btn:hover {
+    background-color: #00e6e6;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .hero-buttons {
+        flex-direction: column;
+        width: 80%;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+}
+
+/* --- Stiluri pentru pagina Despre & Contact --- */
+
+/* Imaginea de fundal specifică */
+.hero.despre-bg {
+    background: url('media/aboutandcontact.JPG') center/cover no-repeat;
+}
+
+.hero.despre-bg::before {
+    background: rgba(0, 0, 0, 0.15); 
+    backdrop-filter: blur(2px);      
+}
+
+/* Ajustare pentru iconițele din butoane */
+.btn i {
+    margin-right: 8px; /* Spațiu între iconiță și text */
+    font-size: 1.2rem; /* Iconița puțin mai mare */
+    vertical-align: middle;
+}
+
+/* Asigurăm că butonul aliniază iconița și textul pe centru */
+.btn {
+    display: inline-flex; /* Folosim flexbox pentru aliniere perfectă */
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Ajustări pentru Bara de Navigație pe Telefon --- */
+@media (max-width: 600px) {
+    .topnav {
+        display: flex;              /* Activează modul flexibil (toate pe un rând) */
+        justify-content: space-between; /* Le distribuie pe toată lățimea ecranului */
+        width: 100%;
+    }
+
+    .topnav a {
+        float: none;                /* Anulăm regula veche de float */
+        font-size: 15px;            /* Micșorăm textul ca să încapă tot */
+        padding: 14px 2px;          /* Reducem spațiul dintre butoane la minim */
+        flex-grow: 1;               /* Forțăm butoanele să împartă spațiul egal */
+        display: flex;              /* Centrare perfectă a textului în buton */
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;        /* Previne ruperea textului pe două rânduri */
     }
 }
