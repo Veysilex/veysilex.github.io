@@ -146,11 +146,21 @@ body {
 
 .image-row img {
     width: 45%;                 
-    height: 300px;              
+    height: 350px;              
     object-fit: cover;          
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
     transition: transform 0.5s ease;
+}
+
+.image-row.custom1 img {
+    width: 45%;                 
+    height: 550px;              
+}
+
+.image-row.custom2 img {
+    width: 45%;                 
+    height: 400px;              
 }
 
 .image-row img:hover {
@@ -162,17 +172,21 @@ body {
         width: 100%;
         height: auto;
     }
+    .image-row.custom1 img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* --- Modificări pentru Galeria Foto (Robotica) --- */
 .image-row.three-col img {
     width: 30%;
-    height: 200px;
+    height: 250px;
 }
 
 .image-row.four-col img {
     width: 22%;
-    height: 180px;
+    height: 300px;
 }
 
 @media (max-width: 900px) {
